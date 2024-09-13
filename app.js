@@ -9,6 +9,24 @@ const dog = new Dog(cat)
 
 // An IoC inversal of control, container. Needs to be used, instead of manually (poor's man DI) injecting things
 
+// -- START OF Middleware ---
+
+
+function loggerAnimalSizeMiddleware(dog) {
+	dog.getSize()
+	console.log("This is my logger: and the dog is in a mood:", dog.getMood())
+}
+
+function increaseSizeOfDogMiddleware(dog) {
+	dog.setSize(30)
+}
+
+function printDogSize(dog) {
+	console.log('This is my printSize MW: ' + dog.getSize())
+}
+
+// -- END OF Middleware ---
+
 dog.bark()
 dog.setSize(66)
 console.log(dog.getSize())
@@ -24,3 +42,11 @@ console.log(cat2.getSize())
 
 
 dog.interactWith()
+
+
+// Execute Middlewares
+
+ar = [printDogSize, increaseSizeOfDogMiddleware, loggerAnimalSizeMiddleware, printDogSize]
+ar.forEach(methd => {
+	methd(dog)
+});

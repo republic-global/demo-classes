@@ -27,6 +27,10 @@ class Dog {
 		// cat.setSize(42)
 		console.log("this is a cat " + this.cat.getSize())
 	}
+
+	getMood(){
+		return this.mood
+	}
 }
 
 module.exports = Dog
