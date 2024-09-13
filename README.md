@@ -6,7 +6,7 @@
 
 ## How to run
 
-to run it simply run
+to run it simply execute
 
 ```shell
 node app.js

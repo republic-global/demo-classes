@@ -1,13 +1,13 @@
-// Construct all our dependency graph, THIS IS CORRECT
+// Composition root - Construct all our dependency graph, THIS IS CORRECT
 
 const Cat = require('./cat')
 const cat = new Cat()
 const cat2 = new Cat()
 const Dog = require('./dog')
-// Here we are doing poor's man dependency injection, using constructor injection
+// Here we are doing poor man's dependency injection, using constructor injection
 const dog = new Dog(cat)
 
-// An IoC inversal of control, container. Needs to be used, instead of manually (poor's man DI) injecting things
+// An IoC inversion of control, container. Needs to be used, instead of manually (poor man's DI) injecting things
 
 // -- START OF Middleware ---
 

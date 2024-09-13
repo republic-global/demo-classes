@@ -6,6 +6,8 @@ class Cat {
 	
 	constructor(){
 		this.mood = animalMood.SAD
+		
+		// This is the WORST practice in the world, to instantiate inside another class
 		const Dog = require('./dog')
 		const cat = new Dog()
 		cat.bark()

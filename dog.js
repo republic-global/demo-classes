@@ -20,7 +20,7 @@ class Dog {
 
 	// Method DI (dependency injection)
 	interactWith() {
-		// This is the WORST practice in the world, to intantiate inside another class
+		// This is the WORST practice in the world, to instantiate inside another class
 
 		// const Cat = require('./cat')
 		// const cat = new Cat()
